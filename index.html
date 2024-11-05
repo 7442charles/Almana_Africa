@@ -25,7 +25,7 @@
     <meta name="twitter:site" content="@AlmanaAfrica">
 
     <!-- Favicon -->
-    <link rel="icon" href="URL_TO_LOGO" type="image/png"> <!-- Replace URL_TO_LOGO with the actual logo URL -->
+    <link rel="icon" href="Assets/images/logo.png" type="image/png"> 
 
     <!-- Tailwind CSS Setup -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -39,9 +39,49 @@
 <body class="bg-gray-100" style="font-family: 'Itim','Montserrat Alternates', sans-serif ;">
 
     <!-- Navbar Section -->
-    <nav>
-        <!-- Navbar code goes here -->
-    </nav>
+<nav class="bg-white shadow">
+    <div class="max-w-screen-xl mx-auto px-4 py-6 flex items-center justify-between md:justify-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+            <a href="index.html">
+                <img src="Assets/images/logo.png" alt="Almana Africa" class="h-16">
+            </a>
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation Links (Desktop) -->
+        <div class="hidden md:flex space-x-8" id="nav-links">
+            <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Home</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Discover</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">About</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Destinations</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Packages</a>
+            <a href="#" class="bg-blue-500 text-white hover:bg-blue-600 text-lg px-4 py-2 rounded">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden" id="mobile-menu" style="display: none;">
+        <div class="flex flex-col space-y-4 px-4 py-2">
+            <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">Discover</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">About</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">Destinations</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">Packages</a>
+            <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-500 font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 uppercase leading-relaxed">Book Now</button>
+        </div>
+    </div>
+    
+</nav>
+
 
     <!-- Carousel Section -->
     <section id="carousel">
@@ -205,6 +245,20 @@
     <footer>
         <!-- Footer code goes here -->
     </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+                mobileMenu.style.display = 'block';
+            } else {
+                mobileMenu.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 </html>
