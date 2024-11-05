@@ -35,52 +35,66 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Itim&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <style>
+        .torange{
+            color: #faae18;
+        }
+        .bgorange{
+            background-color: #faae18;
+        }
+        .tblue{
+            color: #2c83c7;
+        }
+        .bgblue{
+            background-color: #2c83c7;
+        }
+    </style>
 </head>
 <body class="bg-gray-100" style="font-family: 'Itim','Montserrat Alternates', sans-serif ;">
 
     <!-- Navbar Section -->
-<nav class="bg-white shadow">
-    <div class="max-w-screen-xl mx-auto px-4 py-6 flex items-center justify-between md:justify-center">
-        <!-- Logo -->
-        <div class="flex items-center">
-            <a href="index.html">
-                <img src="Assets/images/logo.png" alt="Almana Africa" class="h-16">
-            </a>
+    <nav class="bg-white shadow">
+        <div class="max-w-screen-xl mx-auto px-4 py-6 flex items-center justify-between md:justify-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img src="Assets/images/logo.png" alt="Almana Africa" class="h-16">
+                </a>
+            </div>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links (Desktop) -->
+            <div class="hidden md:flex space-x-8" id="nav-links">
+                <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Discover</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">About</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Destinations</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Packages</a>
+                <a href="#" class="bgblue text-white hover:bg-blue-600 text-lg px-4 py-2 rounded">Book Now</a>
+            </div>
         </div>
 
-        <!-- Hamburger Menu for Mobile -->
-        <div class="md:hidden">
-            <button id="menu-toggle" class="text-gray-700 focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
+        <!-- Mobile Menu -->
+        <div class="md:hidden" id="mobile-menu" style="display: none;">
+            <div class="flex flex-col space-y-4 px-4 py-2">
+                <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500">Discover</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500">About</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500">Destinations</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500">Packages</a>
+                <button type="button" class="text-white bgblue hover:bg-blue-800 focus:ring-4 focus:ring-blue-500 font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 uppercase leading-relaxed">Book Now</button>
+            </div>
         </div>
-
-        <!-- Navigation Links (Desktop) -->
-        <div class="hidden md:flex space-x-8" id="nav-links">
-            <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Home</a>
-            <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Discover</a>
-            <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">About</a>
-            <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Destinations</a>
-            <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Packages</a>
-            <a href="#" class="bg-blue-500 text-white hover:bg-blue-600 text-lg px-4 py-2 rounded">Book Now</a>
-        </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="md:hidden" id="mobile-menu" style="display: none;">
-        <div class="flex flex-col space-y-4 px-4 py-2">
-            <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
-            <a href="#" class="text-gray-700 hover:text-blue-500">Discover</a>
-            <a href="#" class="text-gray-700 hover:text-blue-500">About</a>
-            <a href="#" class="text-gray-700 hover:text-blue-500">Destinations</a>
-            <a href="#" class="text-gray-700 hover:text-blue-500">Packages</a>
-            <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-500 font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 uppercase leading-relaxed">Book Now</button>
-        </div>
-    </div>
-    
-</nav>
+        
+    </nav>
 
 
     <!-- Carousel Section -->
@@ -89,13 +103,96 @@
     </section>
 
     <!-- Premium Packages Section -->
-    <section id="premium">
-        <!-- Premium packages code goes here -->
+    <section id="premium" class="p-5 mx-auto max-w-screen-xl">
+        <h2 class="text-3xl font-bold text-center mb-5 leading-relaxed tblue">Premium <span class="torange">Vacations </span> <span class="tblue">&</span> <span class="text-black">Destinations </span></h2>
+    
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Card 1 -->
+            <div class="max-w-sm bg-white border border-black px-4 py-4 shadow dark:bg-gray-800 dark:border-gray-700">
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight tblue dark:text-white">Beach Front stays</h5>
+                    </a>
+                    <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">"Sun, sand, and serenity at Mombasa
+                        Beach! Escape to the pristine shores,
+                        feel the ocean breeze, and dive into crystal
+                        -clear waters. Whether it's beach walks, sunset
+                        views, or thrilling water sports, Mombasa offers
+                        the ultimate tropical paradise. Pack your
+                        sunscreen, bring your shades, and make memories t
+                        hat last a lifetime.</p>
+                    <br>
+                    <p class="">
+                        #MombasaMagic #BeachVibes
+                    </p>
+                </div>
+                <div class="relative">
+                    <a href="#">
+                        <img class="w-full" src="Assets/images/hero.png" alt="" />
+                    </a>
+                    <a href="#" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-2 rounded hover:bg-blue-600">Explore Now</a>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="max-w-sm bgorange  px-4 py-4 shadow ">
+                <div class="p-5 text-white bgorange">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight  dark:text-white">Celebration season Holidays </h5>
+                    </a>
+                    <p class="mb-2 font-normal ">"Sun, sand, and serenity at Mombasa
+                        Beach! Escape to the pristine shores,
+                        feel the ocean breeze, and dive into crystal
+                        -clear waters. Whether it's beach walks, sunset
+                        views, or thrilling water sports, Mombasa offers
+                        the ultimate tropical paradise. Pack your
+                        sunscreen, bring your shades, and make memories t
+                        hat last a lifetime.</p>
+                    <br>
+                    <p class="">
+                        #AdventureAwaits #TravelGoals
+                    </p>
+                </div>
+                <div class="relative">
+                    <a href="#">
+                        <img class="w-full" src="Assets/images/hero.png" alt="" />
+                    </a>
+                    <a href="#" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bgorange text-black px-4 py-2 rounded hover:bg-blue-600 text-white">Explore Now</a>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="max-w-sm bgblue  px-4 py-4 shadow dark:bg-gray-800 dark:border-gray-700">
+                <div class="p-5 text-white">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight  dark:text-white">Group joining trips/ holidays </h5>
+                    </a>
+                    <p class="mb-2 font-normal">"Sun, sand, and serenity at Mombasa
+                        Beach! Escape to the pristine shores,
+                        feel the ocean breeze, and dive into crystal
+                        -clear waters. Whether it's beach walks, sunset
+                        views, or thrilling water sports, Mombasa offers
+                        the ultimate tropical paradise. Pack your
+                        sunscreen, bring your shades, and make memories t
+                        hat last a lifetime.</p>
+                    <br>
+                    <p class="">
+                        #CulturalJourney #ExploreCulture
+                    </p>
+                </div>
+                <div class="relative">
+                    <a href="#">
+                        <img class="w-full" src="Assets/images/hero.png" alt="" />
+                    </a>
+                    <a href="#" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bgblue text-black px-4 py-2 rounded hover:bg-blue-600">Explore Now</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- vacation Packages Section -->
     <section id="vacation" class="p-5 mx-auto max-w-screen-xl">
-        <h2 class="text-3xl font-bold text-center mb-5">Vacation Packages</h2>
+        <h2 class="text-3xl font-bold text-center mb-5  leading-relaxed tblue">Vacation Packages tailored for <span class="torange">you</span></h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-2">
             <!-- Card 1 -->
             <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -105,7 +202,7 @@
                 <div class="p-5 flex flex-col ">
                     <div class="flex justify-between">
                         <a href="#" class="w-1/2">
-                            <h5 class="mb-2 font-bold tracking-tight text-blue-500 dark:text-white">3 Days Masaai Mara National Park</h5>
+                            <h5 class="mb-2 font-bold tracking-tight tblue dark:text-white">3 Days Masaai Mara National Park</h5>
                         </a>
                         <p class="mb-3 font-normal text-black dark:text-white w-1/2 text-right">valid until dec 2024</p>
                     </div>
@@ -124,12 +221,12 @@
                 <div class="p-5 flex flex-col ">
                     <div class="flex justify-between">
                         <a href="#" class="w-1/2">
-                            <h5 class="mb-2 font-bold tracking-tight text-blue-500 dark:text-white">3 Days Masaai Mara National Park</h5>
+                            <h5 class="mb-2 font-bold tracking-tight torange dark:text-white">3 Days Masaai Mara National Park</h5>
                         </a>
                         <p class="mb-3 font-normal text-black dark:text-white w-1/2 text-right">valid until dec 2024</p>
                     </div>
                     <div class="">
-                        <button class="w-full px-3 py-2 font-medium text-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <button class="w-full px-3 py-2 font-medium text-center text-white bgorange ">
                             Explore Now
                         </button>
                     </div>
@@ -184,12 +281,12 @@
                 <div class="p-5 flex flex-col ">
                     <div class="flex justify-between">
                         <a href="#" class="w-1/2">
-                            <h5 class="mb-2 font-bold tracking-tight text-blue-500 dark:text-white">3 Days Masaai Mara National Park</h5>
+                            <h5 class="mb-2 font-bold tracking-tight torange dark:text-white">3 Days Masaai Mara National Park</h5>
                         </a>
                         <p class="mb-3 font-normal text-black dark:text-white w-1/2 text-right">valid until dec 2024</p>
                     </div>
                     <div class="">
-                        <button class="w-full px-3 py-2 font-medium text-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <button class="w-full px-3 py-2 font-medium text-center text-white bgorange ">
                             Explore Now
                         </button>
                     </div>
@@ -227,13 +324,13 @@
     <!-- Our Mission vision Section -->
     <section id="mission_vision" class="grid grid-cols-1 md:grid-cols-2 gap-14 p-8 md:mx-8 lg:mx-36">
         <div>
-            <h2 class="text-2xl font-bold text-blue-500 mb-4">Our Mission</h2>
+            <h2 class="text-2xl font-bold tblue mb-4">Our Mission</h2>
             <p class="text-justify">
                 "Our mission is to focus on providing unique and sustainable safari experiences across Africa. Their mission typically includes promoting wildlife conservation, supporting local communities, and offering exceptional customer service to ensure memorable adventures for their guests. They aim to create immersive experiences that educate travelers about the rich biodiversity and cultural heritage of the regions they explore."
             </p>
         </div>
         <div>
-            <h2 class="text-2xl font-bold mb-4" style="color: orange;">Our Vision</h2>
+            <h2 class="text-2xl font-bold mb-4 torange" >Our Vision</h2>
             <p class="text-justify">
                 "To be the premier safari company in Africa, delivering unforgettable wildlife experiences while fostering a deep appreciation for the continent's rich ecosystems and cultures. We aim to empower local communities through sustainable tourism, ensuring that our adventures not only connect travelers with nature but also contribute to the preservation of Africa's incredible heritage."
             </p>
