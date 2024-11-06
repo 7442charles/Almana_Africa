@@ -36,6 +36,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Itim&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <style>
+        /* .hero {
+            background-image: url('Assets/images/hero.png');
+            
+        } */
+        
         .torange{
             color: #faae18;
         }
@@ -50,11 +55,10 @@
         }
     </style>
 </head>
-<body class="bg-gray-100" style="font-family: 'Itim','Montserrat Alternates', sans-serif ;">
-
+<body class="bg-gray-100" style="font-family: 'Itim','Montserrat Alternates', sans-serif; transform: rotate(0.2deg); transform-origin: center;"> <!-- FIXME:JUST MESSING WITH MINDS -->
     <!-- Navbar Section -->
     <nav class="bg-white shadow">
-        <div class="max-w-screen-xl mx-auto px-4 py-6 flex items-center justify-between md:justify-center">
+        <div class="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between md:justify-center">
             <!-- Logo -->
             <div class="flex items-center">
                 <a href="index.html">
@@ -98,9 +102,118 @@
 
 
     <!-- Carousel Section -->
-    <section id="carousel">
-        <!-- Carousel code goes here -->
+    <section class="hero flex items-center justify-center relative overflow-hidden" id="carousel" style="background-size: cover; background-position: center; height: 80vh;">
+        <div class="max-w-sm px-4 py-4 shadow-lg transform translate-x-[70%] dark:bg-gray-800 dark:border-gray-700" id="card" style="background-color: #2D83C6B2; transition: transform 1s ease, background-color 1s ease;">
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white" id="heading">Beach Front Stays</h5>
+                </a>
+                <p class="mb-2 font-normal text-gray-100 dark:text-gray-400" id="body">Sun, sand, and serenity at Mombasa Beach! Escape to the pristine shores, feel the ocean breeze, and dive into crystal-clear waters.</p>
+                <br>
+                <p class="text-gray-100" id="hashtags">#MombasaMagic #BeachVibes</p>
+            </div>
+            <a href="#" class="block text-center mt-4 bgorange text-white px-4 py-2 rounded hover:bg-blue-600">Explore Now</a>
+        </div>
+        
+        <!-- Dot Indicators -->
+        <div class="absolute bottom-4 flex justify-center w-full" id="dots-container">
+            <!-- Dots will be dynamically added here -->
+        </div>
     </section>
+    
+    <script>
+        // work with this i couldn't get caurosel to work... Array of objects with data for changing background and text
+        const data = [
+            {
+                bgImage: "url('Assets/images/hero.png')",
+                heading: "Beach Front Stays",
+                body: "Sun, sand, and serenity at Mombasa Beach! Escape to the pristine shores, feel the ocean breeze, and dive into crystal-clear waters.",
+                hashtags: "#MombasaMagic #BeachVibes"
+            },
+            {
+                bgImage: "url('Assets/images/hero2.jpg')",
+                heading: "Mountain Retreat",
+                body: "Find peace in the mountains, with scenic views and tranquil surroundings. Perfect for a relaxing getaway.",
+                hashtags: "#MountainEscape #NatureVibes"
+            },
+            {
+                bgImage: "url('Assets/images/hero3.jpg')",
+                heading: "City Adventures",
+                body: "Discover the hustle and bustle of the city with endless opportunities for adventure, shopping, and dining.",
+                hashtags: "#CityLife #UrbanAdventures"
+            }
+        ];
+    
+        let index = 0; // Initial index
+    
+        //  change the content every 10 seconds
+        function changeContent() {
+            const section = document.getElementById('carousel');
+            const card = document.getElementById('card');
+            const heading = document.getElementById('heading');
+            const body = document.getElementById('body');
+            const hashtags = document.getElementById('hashtags');
+            
+            // Add a fading transition effect on the section and card
+            section.style.transition = 'background-image 1s ease-in-out';
+            card.style.transition = 'transform 1s ease, background-color 1s ease';
+    
+            // Update the background image and text
+            section.style.backgroundImage = data[index].bgImage;
+            card.style.backgroundColor = "#2D83C6B2"; // Keep the same background color for the card
+            heading.textContent = data[index].heading;
+            body.textContent = data[index].body;
+            hashtags.textContent = data[index].hashtags;
+    
+            // Update the dots
+            updateDots();
+    
+            // Update the index to change to the next object, looping back to 0 when at the end
+            index = (index + 1) % data.length;
+        }
+    
+        // Create dot indicators dynamically based on the number of slides
+        function createDots() {
+            const dotsContainer = document.getElementById('dots-container');
+            data.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot', 'w-3', 'h-3', 'rounded-full', 'mx-2', 'cursor-pointer', 'bg-gray-400', 'hover:bg-blue-500');
+                dot.setAttribute('data-index', i);
+                dot.addEventListener('click', () => changeSlide(i));
+                dotsContainer.appendChild(dot);
+            });
+        }
+    
+        // Function to update the active dot
+        function updateDots() {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach(dot => {
+                dot.classList.remove('bg-blue-500');
+                dot.classList.add('bg-gray-400');
+            });
+            dots[index].classList.remove('bg-gray-400');
+            dots[index].classList.add('bg-blue-500');
+        }
+    
+        // Function to change slide manually when a dot is clicked
+        function changeSlide(i) {
+            index = i;
+            changeContent();
+        }
+    
+        // Call the function once to initialize
+        createDots();
+        changeContent();
+    
+        // Set an interval to change the content every 10 seconds
+        setInterval(changeContent, 10000);
+    </script>
+    
+    
+    
+    
+    
+    
 
     <!-- Premium Packages Section -->
     <section id="premium" class="p-5 mx-auto max-w-screen-xl">
@@ -377,7 +490,6 @@
     
 
     <!-- Footer Section -->
-
     <footer class="bgblue relative" style="background-image: url('pAssets/images/pattern_bg.png'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-[#2D83C6] opacity-50"></div> 
         <div class="relative mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -453,7 +565,7 @@
 
     
 
-    <!-- JavaScript for Mobile Menu Toggle -->
+    <!--  Mobile Menu Toggle -->
     <script>
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
