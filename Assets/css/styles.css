@@ -21,3 +21,133 @@ body{
 .bgblue{
     background-color: #2c83c7;
 }
+
+/*   =====================================================
+    DESTINATION PAGE CSS
+===================================================== */
+/* Main container styling */
+.Destination-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    flex-wrap: wrap;
+}
+.Destination-card-center {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* Image styling */
+.image-container {
+    width: 60%;
+    margin-right: 16px;
+}
+
+.image {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    /* Remove border-radius */
+    border-radius: 0;
+}
+
+/* Text card styling */
+.text-card {
+    width: 60%;
+    background-color: white;
+    padding: 24px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: calc(65%);
+    transform: translate(-20%, -50%);
+    /* Remove border-radius */
+    border-radius: 0;
+}
+.text-card-center {
+    width: 60%;
+    background-color: white;
+    padding: 24px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    right: calc(40%);
+    transform: translate(-20%, -50%);
+    /* Remove border-radius */
+    border-radius: 0;
+}
+/* Text and button styling */
+.title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #FFA500;
+}
+
+.description {
+    margin-top: 16px;
+    color: #4a4a4a;
+}
+
+.button-container {
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+}
+
+.book-btn {
+    background-color: #FFA500;
+    color: white;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.learn-btn {
+    background-color: transparent;
+    color: #FFA500;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 1px solid #FFA500;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background-color: #ff8c00;
+}
+
+.learn-btn:hover {
+    background-color: #FFF5E5;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+    .Destination-card, .Destination-card-center {
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 98%;
+        margin-right: 0;
+    }
+
+    .text-card, .text-card-center {
+        width: 88%;
+        position: static; 
+        transform: none;
+        margin-top: -20%; 
+        padding: 20px;
+    }
+    
+}
