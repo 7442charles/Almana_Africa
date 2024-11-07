@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Almana Africa - Your Adventure Awaits</title>
+    
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Almana Africa offers unforgettable tours and adventures across Africa. Explore the beauty of nature with us.">
+        <meta name="keywords" content="Almana Africa, tours, travel, adventures, Africa, safari, nature">
+        <meta name="author" content="Almana Africa">
+    
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Almana Africa - Your Adventure Awaits">
+        <meta property="og:description" content="Almana Africa offers unforgettable tours and adventures across Africa. Explore the beauty of nature with us.">
+        <meta property="og:image" content="Assets/images/logo.png">
+        <meta property="og:url" content="#">  <!-- TODO:ADD ACTUAL SITE URL -->
+        <meta property="og:type" content="website">
+    
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Almana Africa - Your Adventure Awaits">
+        <meta name="twitter:description" content="Almana Africa offers unforgettable tours and adventures across Africa. Explore the beauty of nature with us.">
+        <meta name="twitter:image" content="#">  <!-- TODO:ADD ACTUAL SITE URL -->
+        <meta name="twitter:site" content="@AlmanaAfrica">
+    
+        <!-- Favicon -->
+        <link rel="icon" href="Assets/images/logo.png" type="image/png"> 
+    
+        <!-- Tailwind CSS Setup -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+        <!-- Goole fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Itim&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+        <!-- main style -->
+         <link rel="stylesheet" href="Assets/css/styles.css">
+    
+    </head>
+<body class="bg-gray-100">
+    <!-- Navbar Section -->
+    <nav class="bg-white shadow">
+        <div class="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between md:justify-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img src="Assets/images/logo.png" alt="Almana Africa" class="h-16">
+                </a>
+            </div>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links (Desktop) -->
+            <div class="hidden md:flex space-x-8" id="nav-links">
+                <a href="index.html" class="text-gray-700 hover:text-blue-500 text-lg ">Home</a>
+                <a href="#premium" class="text-gray-700 hover:text-blue-500 text-lg">Discover</a>
+                <a href="#mission_vision" class="text-gray-700 hover:text-blue-500 text-lg">About</a>
+                <a href="#vacation" class="text-gray-700 hover:text-blue-500 text-lg active">Destinations</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500 text-lg">Packages</a>
+                <a href="#" class="bgblue text-white hover:bg-blue-600 text-lg px-4 py-2 rounded">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden" id="mobile-menu" style="display: none;">
+            <div class="flex flex-col space-y-4 px-4 py-2">
+                <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
+                <a href="#premium" class="text-gray-700 hover:text-blue-500">Discover</a>
+                <a href="#mission_vision" class="text-gray-700 hover:text-blue-500">About</a>
+                <a href="#vacation" class="text-gray-700 hover:text-blue-500 active">Destinations</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500">Packages</a>
+                <button type="button" class="text-white bgblue hover:bg-blue-800 focus:ring-4 focus:ring-blue-500 font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 uppercase leading-relaxed">Book Now</button>
+            </div>
+        </div>
+        
+    </nav>
+    
+
+    <!-- Hero Section -->
+     <section class="hero">
+
+     </section>
+
+
+    
+    <!-- Footer Section -->
+    <footer class="bgblue relative w-screen mx-4" style="background-image: url('Assets/images/footer.png'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-[#2D83C6] opacity-50"></div> 
+        <div class="relative mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-around">
+                <div class="mb-6 md:mb-0">
+                    <div class="bg-white rounded-lg p-4 flex justify-center items-center"> 
+                        <a href="#" class="flex items-center">
+                            <img src="Assets/images/logo.png" class="h-20 transition-transform duration-300 ease-in-out transform hover:scale-125" alt="Almana Africa Safaris" />
+                        </a>
+                    </div>
+                    <p class="text-white mt-2 max-w-md mx-auto text-justify"> 
+                        Almana Africa Safaris is known for offering immersive
+                        wildlife experiences and adventure travel in some of Africa's
+                        most stunning destinations. The company typically
+                        focuses on providing personalized safari experiences,
+                        allowing travelers to explore diverse ecosystems, from
+                        savannas to dense jungles.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Quick Links</h2>
+                        <ul class="text-white font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Home</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Discover</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">About</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Packages</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Destinations</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Book Now</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Talk To Us Today</h2>
+                        <ul class="text-white font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Home</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Discover</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">About</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Packages</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Destinations</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Book Now</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <hr class="my-6 sm:mx-auto" style="border-color: #faae18; border-width: 3px; border-radius: 30%; " />
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Itim','Montserrat Alternates', sans-serif; 
+    /* transform: rotate(0.2deg); transform-origin: center; */
+}
+
+.active {
+    
+}
+.torange,  .active{
+    color: #faae18;
+}
+.bgorange{
+    background-color: #faae18;
+}
+.tblue{
+    color: #2c83c7;
+}
+.bgblue{
+    background-color: #2c83c7;
+}
