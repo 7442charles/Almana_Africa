@@ -73,7 +73,7 @@
         <!-- Mobile Menu -->
         <div class="md:hidden" id="mobile-menu" style="display: none;">
             <div class="flex flex-col space-y-4 px-4 py-2">
-                <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
+                <a href="index.html" class="text-gray-700 hover:text-blue-500 active">Home</a>
                 <a href="#premium" class="text-gray-700 hover:text-blue-500">Discover</a>
                 <a href="#mission_vision" class="text-gray-700 hover:text-blue-500">About</a>
                 <a href="destination.html" class="text-gray-700 hover:text-blue-500">Destinations</a>
@@ -544,19 +544,8 @@
 
     
 
-    <!--  Mobile Menu Toggle -->
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuToggle.addEventListener('click', () => {
-            if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
-                mobileMenu.style.display = 'block';
-            } else {
-                mobileMenu.style.display = 'none';
-            }
-        });
-    </script>
+   
+   <script src="Assets/js/main.js"></script>
 
 </body>
 </html>
