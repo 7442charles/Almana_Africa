@@ -4,6 +4,7 @@ html{
 body{
     font-family: 'Itim','Montserrat Alternates', sans-serif; 
     /* transform: rotate(0.2deg); transform-origin: center; */
+    overflow-x: hidden;
 }
 
 .active {
