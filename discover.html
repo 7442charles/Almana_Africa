@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Almana Africa - Your Adventure Awaits</title>
+    
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Almana Africa offers unforgettable tours and adventures across Africa. Explore the beauty of nature with us.">
+        <meta name="keywords" content="Almana Africa, tours, travel, adventures, Africa, safari, nature">
+        <meta name="author" content="Almana Africa">
+    
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Almana Africa - Your Adventure Awaits">
+        <meta property="og:description" content="Almana Africa offers unforgettable tours and adventures across Africa. Explore the beauty of nature with us.">
+        <meta property="og:image" content="Assets/images/logo.png">
+        <meta property="og:url" content="#">  <!-- TODO:ADD ACTUAL SITE URL -->
+        <meta property="og:type" content="website">
+    
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Almana Africa - Your Adventure Awaits">
+        <meta name="twitter:description" content="Almana Africa offers unforgettable tours and adventures across Africa. Explore the beauty of nature with us.">
+        <meta name="twitter:image" content="#">  <!-- TODO:ADD ACTUAL SITE URL -->
+        <meta name="twitter:site" content="@AlmanaAfrica">
+    
+        <!-- Favicon -->
+        <link rel="icon" href="Assets/images/logo.png" type="image/png"> 
+    
+        <!-- Tailwind CSS Setup -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <!-- Goole fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Itim&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+        <!-- main style -->
+         <link rel="stylesheet" href="Assets/css/styles.css">
+    
+    </head>
+<body>
+    <nav class="bg-white shadow">
+        <div class="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between md:justify-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img src="Assets/images/logo.png" alt="Almana Africa" class="h-16">
+                </a>
+            </div>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links (Desktop) -->
+            <div class="hidden md:flex space-x-8" id="nav-links">
+                <a href="index.html" class="text-gray-700 hover:text-blue-500 text-lg ">Home</a>
+                <a href="discover.html" class="text-gray-700 hover:text-blue-500 text-lg active">Discover</a>
+                <a href="#mission_vision" class="text-gray-700 hover:text-blue-500 text-lg">About</a>
+                <a href="destination.html" class="text-gray-700 hover:text-blue-500 text-lg">Destinations</a>
+                <a href="#vacation" class="text-gray-700 hover:text-blue-500 text-lg ">Packages</a>
+                <a href="#" class="bgblue text-white hover:bg-blue-600 text-lg px-4 py-2 rounded">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden" id="mobile-menu" style="display: none;">
+            <div class="flex flex-col space-y-4 px-4 py-2">
+                <a href="index.html" class="text-gray-700 hover:text-blue-500 ">Home</a>
+                <a href="discover.html" class="text-gray-700 hover:text-blue-500 active">Discover</a>
+                <a href="#mission_vision" class="text-gray-700 hover:text-blue-500">About</a>
+                <a href="destination.html" class="text-gray-700 hover:text-blue-500">Destinations</a>
+                <a href="#vacation" class="text-gray-700 hover:text-blue-500 ">Packages</a>
+                <button type="button" class="text-white bgblue hover:bg-blue-800 focus:ring-4 focus:ring-blue-500 font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 uppercase leading-relaxed">Book Now</button>
+            </div>
+        </div>
+        
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero bg-cover bg-center he flex items-center justify-center" style="background-image: url('./Assets/images/discover_hero.png'); background-attachment: fixed; height: 60vh;">
+        <div class="bg-opacity-50 p-6 rounded-lg">
+            <h1 class="text-white text-3xl md:text-5xl font-bold text-center">Discover new destinations and hidden gems</h1>
+        </div>
+    </section>
+
+    <!-- Discover Section 1  -->
+     <!-- card 1 -->
+    <div class="bg-white dark:bg-gray-900">
+        <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+            <img class="w-full dark:hidden" src="Assets/images/masaai_mara_map.png" alt="dashboard image">
+            <img class="w-full hidden dark:block" src="Assets/images/masaai_mara_map.png" alt="dashboard image">
+            <div class="mt-4 md:mt-0">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold torange">Masaai mara game reserve.</h2>
+                <p class="mb-6 font-light md:text-lg ">
+                    The Maasai Mara Game Reserve, located in southwestern Kenya,
+                    is one of Africa's most famous wildlife reserves. It's renowned for its
+                    stunning landscapes, diverse wildlife, and the Great Migration, where
+                    millions of wildebeest and zebras migrate from the Serengeti in
+                    Tanzania to the Mara in search of greener pastures.
+                </p>
+
+                <h3 class="mb-4 text-4xl tracking-tight font-bold torange ">Key Features:</h3>
+                <p class="mb-2 font-light md:text-lg">
+                    <span class="tblue">Wildlife Diversity:</span> The reserve is home to the "Big Five" (lion, leopard,
+                    elephant, buffalo, and rhinoceros), along with cheetahs, giraffes, hippos,
+                    and a variety of bird species.
+                </p>
+                <p class="mb-2 font-light md:text-lg">
+                    <span class="tblue">Great Migration:</span> Occurring annually from July to October, this
+                    spectacular event attracts tourists from around the world who come to
+                    witness the dramatic river crossings and predator-prey interactions.
+                </p>
+                <p class="mb-2 font-light md:text-lg">
+                    <span class="tblue">Cultural Heritage:</span> The Maasai people, known for their distinctive
+                    customs and dress, inhabit the region and often engage in cultural
+                    tourism, allowing visitors to learn about their traditions and way of life.
+                </p>
+                <p class="mb-2 font-light md:text-lg">
+                    <span class="tblue">Activities:</span> Visitors can enjoy game drives, hot air balloon safaris, guided
+                    nature walks, and cultural visits to Maasai villages.
+                </p>
+                <br>
+                
+                <p class=" font-light md:text-lg text-gray-500">
+                    The Maasai Mara Game Reserve plays a vital role in conservation and
+                    tourism in Kenya, making it a must-visit destination for nature and
+                    wildlife enthusiasts.
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- card 2 -->
+    <div class="bg-white dark:bg-gray-900">
+        <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+            <div class="mt-4 md:mt-0"> <!-- Text section comes first -->
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold torange">Masaai Mara Game Reserve.</h2>
+                <p class="mb-6 font-light md:text-lg">
+                    The Maasai Mara Game Reserve, located in southwestern Kenya,
+                    is one of Africa's most famous wildlife reserves. It's renowned for its
+                    stunning landscapes, diverse wildlife, and the Great Migration, where
+                    millions of wildebeest and zebras migrate from the Serengeti in
+                    Tanzania to the Mara in search of greener pastures.
+                </p>
+                <h2 class="mb-4 text-4xl tracking-tight font-bold torange">Key Features:</h2>
+                <p class="mb-2 font-light md:text-lg">
+                    <span class="tblue">Wildlife Diversity:</span> The reserve is home to the "Big Five" (lion, leopard,
+                    elephant, buffalo, and rhinoceros), along with cheetahs, giraffes, hippos,
+                    and a variety of bird species.
+                </p>
+                <p class="mb-2 font-light md:text-lg">
+                    <span class="tblue">Great Migration:</span> Occurring annually from July to October, this
+                    spectacular event attracts tourists from around the world who come to
+                    witness the dramatic river crossings and predator-prey interactions.
+                </p>
+                <p class="mb-2 font-light md:text-lg">
+                    <span class="tblue">Cultural Heritage:</span> The Maasai people, known for their distinctive
+                    customs and dress, inhabit the region and often engage in cultural
+                    tourism, allowing visitors to learn about their traditions and way of life.
+                </p>
+                <p class="mb-2 font-light md:text-lg">
+                    <span class="tblue">Activities:</span> Visitors can enjoy game drives, hot air balloon safaris, guided
+                    nature walks, and cultural visits to Maasai villages.
+                </p>
+                <br>
+                
+                <p class="font-light md:text-lg text-gray-500">
+                    The Maasai Mara Game Reserve plays a vital role in conservation and
+                    tourism in Kenya, making it a must-visit destination for nature and
+                    wildlife enthusiasts.
+                </p>
+            </div>
+            
+            <!-- Image section comes second -->
+            <img class="w-full dark:hidden" src="Assets/images/masaai_mara_map.png" alt="dashboard image">
+            <img class="w-full hidden dark:block" src="Assets/images/masaai_mara_map.png" alt="dashboard image">
+        </div>
+    </div>
+
+    <!-- Vacation Packages Section -->
+    <section id="packages" class="p-2 mx-auto max-w-screen-xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4"> <!-- Added px-4 for equal left and right padding -->
+            <!-- Card 1 -->
+            <div class="max-w-xs bg-white rounded-lg shadow-lg overflow-hidden p-4 shadow-custom mt-4 mb-4 w-full"> <!-- Added w-full for consistent width -->
+                <img class="w-full h-48 object-cover" src="./Assets/images/packages.png" alt="Maasai Mara">
+                
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">3 days Maasai Mara</h2>
+                    <p class="text-gray-600 text-sm mb-4">
+                        3-day itinerary for the Maasai Mara that balances wildlife viewing, cultural experiences, relaxation and serenity
+                    </p>
+                    
+                    <div class="text-blue-600 text-sm mb-2">
+                        <p class="flex items-center">
+                            <img src="./Assets/images/calender.svg" alt="Info Icon" class="h-4 w-4 mr-1"> Subject to customer request
+                        </p>
+                        <p class="flex items-center">
+                            <img src="./Assets/images/clock.svg" alt="Calendar Icon" class="h-4 w-4 mr-1"> 3 days 2 nights | extendable on request
+                        </p>
+                    </div>
+                    
+                    <div class="flex space-x-2 mt-4">
+                        <button class="bg-yellow-500 text-white px-4 py-2 hover:bg-yellow-600">Book now</button>
+                        <button class="border border-yellow-500 text-yellow-500 px-4 py-2 hover:bg-yellow-500 hover:text-white">Learn more</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="max-w-xs bg-white rounded-lg shadow-lg overflow-hidden p-4 shadow-custom mt-4 mb-4 w-full"> <!-- Added w-full for consistent width -->
+                <img class="w-full h-48 object-cover" src="./Assets/images/packages.png" alt="Maasai Mara">
+                
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">3 days Maasai Mara</h2>
+                    <p class="text-gray-600 text-sm mb-4">
+                        3-day itinerary for the Maasai Mara that balances wildlife viewing, cultural experiences, relaxation and serenity
+                    </p>
+                    
+                    <div class="text-blue-600 text-sm mb-2">
+                        <p class="flex items-center">
+                            <img src="./Assets/images/calender.svg" alt="Info Icon" class="h-4 w-4 mr-1"> Subject to customer request
+                        </p>
+                        <p class="flex items-center">
+                            <img src="./Assets/images/clock.svg" alt="Calendar Icon" class="h-4 w-4 mr-1"> 3 days 2 nights | extendable on request
+                        </p>
+                    </div>
+                    
+                    <div class="flex space-x-2 mt-4">
+                        <button class="bg-yellow-500 text-white px-4 py-2 hover:bg-yellow-600">Book now</button>
+                        <button class="border border-yellow-500 text-yellow-500 px-4 py-2 hover:bg-yellow-500 hover:text-white">Learn more</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="max-w-xs bg-white rounded-lg shadow-lg overflow-hidden p-4 shadow-custom mt-4 mb-4 w-full"> <!-- Added w-full for consistent width -->
+                <img class="w-full h-48 object-cover" src="./Assets/images/packages.png" alt="Maasai Mara">
+                
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">3 days Maasai Mara</h2>
+                    <p class="text-gray-600 text-sm mb-4">
+                        3-day itinerary for the Maasai Mara that balances wildlife viewing, cultural experiences, relaxation and serenity
+                    </p>
+                    
+                    <div class="text-blue-600 text-sm mb-2">
+                        <p class="flex items-center">
+                            <img src="./Assets/images/calender.svg" alt="Info Icon" class="h-4 w-4 mr-1"> Subject to customer request
+                        </p>
+                        <p class="flex items-center">
+                            <img src="./Assets/images/clock.svg" alt="Calendar Icon" class="h-4 w-4 mr-1"> 3 days 2 nights | extendable on request
+                        </p>
+                    </div>
+                    
+                    <div class="flex space-x-2 mt-4">
+                        <button class="bg-yellow-500 text-white px-4 py-2 hover:bg-yellow-600">Book now</button>
+                        <button class="border border-yellow-500 text-yellow-500 px-4 py-2 hover:bg-yellow-500 hover:text-white">Learn more</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="call-to-action bg-cover bg-center  flex items-center justify-center  bgblue" style="background-image: url('./Assets/images/discover_CTA.png'); background-position:center; background-size:cover; background-attachment:fixed; height:60vh;">
+        <div class=" bg-opacity-60 p-6 rounded-lg text-center">
+            <h2 class="text-white text-2xl md:text-4xl font-bold mb-4">Visit another country in one day</h2>
+            <button class="bgorange text-white hover:bg-yellow-600 font-semibold py-2 px-4 rounded">
+                Create one for me
+            </button>
+        </div>
+    </section>
+        
+    <!-- Footer Section -->
+    <footer class="bgblue relative w-screen mx-0" style="background-image: url('Assets/images/footer.png'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-[#2D83C6] opacity-50"></div> 
+        <div class="relative mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-around">
+                <div class="mb-6 md:mb-0">
+                    <div class="bg-white rounded-lg p-4 flex justify-center items-center"> 
+                        <a href="#" class="flex items-center">
+                            <img src="Assets/images/logo.png" class="h-20 transition-transform duration-300 ease-in-out transform hover:scale-125" alt="Almana Africa Safaris" />
+                        </a>
+                    </div>
+                    <p class="text-white mt-2 max-w-md mx-auto text-justify"> 
+                        Almana Africa Safaris is known for offering immersive
+                        wildlife experiences and adventure travel in some of Africa's
+                        most stunning destinations. The company typically
+                        focuses on providing personalized safari experiences,
+                        allowing travelers to explore diverse ecosystems, from
+                        savannas to dense jungles.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Quick Links</h2>
+                        <ul class="text-white font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Home</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Discover</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">About</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Packages</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Destinations</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Book Now</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Talk To Us Today</h2>
+                        <ul class="text-white font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Home</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Discover</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">About</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Packages</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Destinations</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Book Now</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <hr class="my-6 sm:mx-auto" style="border-color: #faae18; border-width: 3px; border-radius: 30%; " />
+        </div>
+    </footer>
+    <script src="Assets/js/main.js" async defer></script>
+</body>
+</html>
