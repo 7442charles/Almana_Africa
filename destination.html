@@ -161,16 +161,23 @@
     <br> 
 
      <!-- Call to Action Section -->
-    <section class="call-to-action bg-cover bg-center  flex items-center justify-center" style="background-image: url('Assets/images/Des_CTA.png'); background-size: cover;
-            background-position: center;
-            background-attachment: fixed; height:80vh;">
-        <div class=" bg-opacity-60 p-6 rounded-lg text-center">
+     <section class="call-to-action bg-cover bg-center flex items-center justify-center" style="background-image: url('Assets/images/Des_CTA.png'); background-size: cover; background-position: center; background-attachment: fixed; height:80vh;">
+        <div class="bg-opacity-60 p-6 rounded-lg text-center">
             <h2 class="text-white text-2xl md:text-4xl font-bold mb-4">Are you looking for a weekend getaway packages?</h2>
-            <button class="bgorange text-white hover:bg-yellow-600 font-semibold py-2 px-4 rounded">
+            <button id="getawayButton" class="bgorange text-white hover:bg-yellow-600 font-semibold py-2 px-4 rounded">
                 Create one for me
             </button>
         </div>
     </section>
+    
+    <script>
+        document.getElementById('getawayButton').onclick = function() {
+            const phoneNumber = '+254759418593';
+            const message = 'Hello! I am interested in the weekend getaway packages.';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        };
+    </script>
 
     <!-- <br> -->
     <br>

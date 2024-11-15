@@ -265,14 +265,23 @@
         <br>
 
         <!-- Call to Action Section -->
-        <section class="call-to-action bg-cover bg-center  flex items-center justify-center  bgblue" style="background-image: url('./Assets/images/pack_CTA.png'); background-position:center; background-size:cover; background-attachment:fixed; height:80vh;">
-            <div class=" bg-opacity-60 p-6 rounded-lg text-center">
+        <section class="call-to-action bg-cover bg-center flex items-center justify-center bgblue" style="background-image: url('./Assets/images/pack_CTA.png'); background-position:center; background-size:cover; background-attachment:fixed; height:80vh;">
+            <div class="bg-opacity-60 p-6 rounded-lg text-center">
                 <h2 class="text-white text-2xl md:text-4xl font-bold mb-4">Do you need a company team building package?</h2>
-                <button class="bgblue text-white hover:bg-yellow-600 font-semibold py-2 px-4 rounded">
+                <button id="whatsappButton" class="bgblue text-white hover:bg-yellow-600 font-semibold py-2 px-4 rounded">
                     Create one for me
                 </button>
             </div>
         </section>
+        
+        <script>
+            document.getElementById('whatsappButton').onclick = function() {
+                const phoneNumber = '+254759418593';
+                const message = 'Hello! I am interested in the company team building package.';
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            };
+        </script>
 
         <!-- Footer Section -->
         <footer class="bgblue relative w-screen mx-0" style="background-image: url('Assets/images/new_footer.png'); background-size: cover; background-position: center;">
