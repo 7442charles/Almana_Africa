@@ -98,41 +98,31 @@
             <img class="w-full dark:hidden" src="Assets/images/masaai_mara_map.png" alt="dashboard image">
             <img class="w-full hidden dark:block" src="Assets/images/masaai_mara_map.png" alt="dashboard image">
             <div class="mt-4 md:mt-0">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold torange">Masaai mara game reserve.</h2>
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold torange">Aberdare National Park</h2>
                 <p class="mb-6 font-light md:text-lg ">
-                    The Maasai Mara Game Reserve, located in southwestern Kenya,
-                    is one of Africa's most famous wildlife reserves. It's renowned for its
-                    stunning landscapes, diverse wildlife, and the Great Migration, where
-                    millions of wildebeest and zebras migrate from the Serengeti in
-                    Tanzania to the Mara in search of greener pastures.
+                    Aberdare National Park, located in central Kenya, is renowned for its stunning landscapes, diverse wildlife, and rich ecosystems. The Park features high-altitude moorlands, dense forests, and dramatic valleys, providing a habitat for various species, including elephants, lions, leopards, and numerous bird species.
                 </p>
 
                 <h3 class="mb-4 text-4xl tracking-tight font-bold torange ">Key Features:</h3>
                 <p class="mb-2 font-light md:text-lg">
-                    <span class="tblue">Wildlife Diversity:</span> The reserve is home to the "Big Five" (lion, leopard,
-                    elephant, buffalo, and rhinoceros), along with cheetahs, giraffes, hippos,
-                    and a variety of bird species.
+                    <span class="tblue">Scenic Beauty:</span> The park's varied terrain includes waterfalls, rivers, and breathtaking views of the Aberdare mountain range.
                 </p>
                 <p class="mb-2 font-light md:text-lg">
-                    <span class="tblue">Great Migration:</span> Occurring annually from July to October, this
-                    spectacular event attracts tourists from around the world who come to
-                    witness the dramatic river crossings and predator-prey interactions.
+                    <span class="tblue">Wildlife Viewing:</span> Visitors can spot wildlife both on game drives and at designated viewing areas, especially at salt licks and waterholes.
                 </p>
                 <p class="mb-2 font-light md:text-lg">
-                    <span class="tblue">Cultural Heritage:</span> The Maasai people, known for their distinctive
-                    customs and dress, inhabit the region and often engage in cultural
-                    tourism, allowing visitors to learn about their traditions and way of life.
+                    <span class="tblue">Unique Ecosystems:</span> The park is home to both rainforest and alpine moorland, making it a unique destination for nature lovers and hikers.
                 </p>
                 <p class="mb-2 font-light md:text-lg">
-                    <span class="tblue">Activities:</span> Visitors can enjoy game drives, hot air balloon safaris, guided
-                    nature walks, and cultural visits to Maasai villages.
+                    <span class="tblue">Activities:</span>  Popular activities include hiking, birdwatching, and camping. There are also options for guided nature walks.
                 </p>
                 <br>
-                
+                <p class="mb-2 font-light md:text-lg">
+                    <span class="tblue">Cultural Significance:</span>  The park has historical significance and is linked to the Kikuyu people, with various cultural sites nearby.
+                </p>
+                <br>
                 <p class=" font-light md:text-lg text-gray-500">
-                    The Maasai Mara Game Reserve plays a vital role in conservation and
-                    tourism in Kenya, making it a must-visit destination for nature and
-                    wildlife enthusiasts.
+                    Aberdare National Park is a beautiful destination for those seeking adventure and a chance to experience Kenya's natural beauty.
                 </p>
                 
             </div>
@@ -274,10 +264,18 @@
     <section class="call-to-action bg-cover bg-center  flex items-center justify-center  bgblue" style="background-image: url('./Assets/images/discover_CTA.png'); background-position:center; background-size:cover; background-attachment:fixed; height:60vh;">
         <div class=" bg-opacity-60 p-6 rounded-lg text-center">
             <h2 class="text-white text-2xl md:text-4xl font-bold mb-4">Visit another country in one day</h2>
-            <button class="bgorange text-white hover:bg-yellow-600 font-semibold py-2 px-4 rounded">
+            <button id="visisCountryCta" class="bgorange text-white hover:bg-yellow-600 font-semibold py-2 px-4 rounded">
                 Create one for me
             </button>
         </div>
+        <script>
+            document.getElementById('visisCountryCta').onclick = function() {
+                const phoneNumber = '+254759418593';
+                const message = 'Hello! I am interested in the international visit packages.';
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            };
+        </script>
     </section>
         
     <!-- Footer Section -->
@@ -291,7 +289,7 @@
                             <img src="Assets/images/logo.png" class="h-20 transition-transform duration-300 ease-in-out transform hover:scale-125" alt="Almana Africa Safaris" />
                         </a>
                     </div>
-                    <p class="text-white mt-2 max-w-md mx-auto text-justify"> 
+                    <p class="text-white mt-2 max-w-md mx-auto text-justify" id="About_us _footer"> 
                         Almana Africa Safaris is known for offering immersive
                         wildlife experiences and adventure travel in some of Africa's
                         most stunning destinations. The company typically
@@ -308,23 +306,21 @@
                                 <a href="#" class="hover:underline">Home</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#" class="hover:underline">Discover</a>
+                                <a href="index.html" class="hover:underline">Discover</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#" class="hover:underline">About</a>
+                                <a href="#About_us _footer" class="hover:underline">About</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#" class="hover:underline">Packages</a>
+                                <a href="packages.html" class="hover:underline">Packages</a>
                             </li>
                             <li class="mb-4">
                                 <a href="#" class="hover:underline">Destinations</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Book Now</a>
-                            </li>
+                            
                         </ul>
                     </div>
-                    <div>
+                    <!-- <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Talk To Us Today</h2>
                         <ul class="text-white font-medium">
                             <li class="mb-4">
@@ -346,13 +342,14 @@
                                 <a href="#" class="hover:underline">Book Now</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                     
                 </div>
             </div>
             <hr class="my-6 sm:mx-auto" style="border-color: #faae18; border-width: 3px; border-radius: 30%; " />
         </div>
     </footer>
+
     <script src="Assets/js/main.js" async defer></script>
 </body>
 </html>
