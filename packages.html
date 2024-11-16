@@ -59,28 +59,34 @@
                     </button>
                 </div>
     
-                <!-- Navigation Links (Desktop) -->
-                <div class="hidden md:flex space-x-8" id="nav-links">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-500 text-lg ">Home</a>
-                    <a href="discover.html" class="text-gray-700 hover:text-blue-500 text-lg">Discover</a>
-                    <a href="#mission_vision" class="text-gray-700 hover:text-blue-500 text-lg">About</a>
-                    <a href="destination.html" class="text-gray-700 hover:text-blue-500 text-lg">Destinations</a>
-                    <a href="packages.html" class="text-gray-700 hover:text-blue-500 text-lg active">Packages</a>
-                    <a href="#" class="bgblue text-white hover:bg-blue-600 text-lg px-4 py-2 rounded">Book Now</a>
-                </div>
+                 <!-- Navigation Links (Desktop) -->
+            <div class="hidden md:flex space-x-8" id="nav-links">
+                <a href="index.html" class="text-gray-700 hover:text-blue-500 text-lg active">Home</a>
+                <a href="discover.html" class="text-gray-700 hover:text-blue-500 text-lg">Discover</a>
+                <a href="#mission_vision" class="text-gray-700 hover:text-blue-500 text-lg">About</a>
+                <a href="destination.html" class="text-gray-700 hover:text-blue-500 text-lg">Destinations</a>
+                <a href="packages.html" class="text-gray-700 hover:text-blue-500 text-lg">Packages</a>
+                <button 
+                    data-modal-target="crud-modal" data-modal-toggle="crud-modal"  class="bgblue text-white hover:bg-blue-600 text-lg px-4 py-2 rounded " type="button" id="open-modal">
+                    Book Now
+                </button>
             </div>
-    
-            <!-- Mobile Menu -->
-            <div class="md:hidden" id="mobile-menu" style="display: none;">
-                <div class="flex flex-col space-y-4 px-4 py-2">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-500 ">Home</a>
-                    <a href="discover.html" class="text-gray-700 hover:text-blue-500">Discover</a>
-                    <a href="#mission_vision" class="text-gray-700 hover:text-blue-500">About</a>
-                    <a href="destination.html" class="text-gray-700 hover:text-blue-500">Destinations</a>
-                    <a href="packages.html" class="text-gray-700 hover:text-blue-500 active">Packages</a>
-                    <button type="button" class="text-white bgblue hover:bg-blue-800 focus:ring-4 focus:ring-blue-500 font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 uppercase leading-relaxed">Book Now</button>
-                </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden" id="mobile-menu" style="display: none;">
+            <div class="flex flex-col space-y-4 px-4 py-2">
+                <a href="index.html" class="text-gray-700 hover:text-blue-500 active">Home</a>
+                <a href="discover.html" class="text-gray-700 hover:text-blue-500">Discover</a>
+                <a href="#mission_vision" class="text-gray-700 hover:text-blue-500">About</a>
+                <a href="destination.html" class="text-gray-700 hover:text-blue-500">Destinations</a>
+                <a href="packages.html" class="text-gray-700 hover:text-blue-500">Packages</a>
+                <button 
+                    data-modal-target="crud-modal" data-modal-toggle="crud-modal"  class="bgblue text-white hover:bg-blue-600 text-lg px-4 py-2 rounded open-modal" type="button" id="open-modal-mobile" >
+                    Book Now
+                </button>
             </div>
+        </div>
             
         </nav>
        
@@ -276,9 +282,8 @@
         
         <script>
             document.getElementById('whatsappButton').onclick = function() {
-                const phoneNumber = '+254759418593';
                 const message = 'Hello! I am interested in the company team building package.';
-                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                const whatsappUrl = `https://wa.me/${phone_number}?text=${encodeURIComponent(message)}`;
                 window.open(whatsappUrl, '_blank');
             };
         </script>
@@ -354,6 +359,57 @@
                 <hr class="my-6 sm:mx-auto" style="border-color: #faae18; border-width: 3px; border-radius: 30%; " />
             </div>
         </footer>
+
+        <!-- Book Now Navbar button modal -->
+    <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed inset-0 flex z-50 justify-center items-center">
+        <div class="relative p-4 w-full max-w-md max-h-full">
+            <div class="relative bg-blue-500 rounded-lg shadow">
+                <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-lg font-semibold text-white">
+                        Create A Booking
+                    </h3>
+                    <button id="close-modal" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <form id="booking-form" class="p-4">
+                    <div class="grid gap-4 mb-4 grid-cols-2">
+                        <div class="col-span-2">
+                            <label for="name" class="block mb-2 text-sm font-medium text-black">Name</label>
+                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Type Your name" required >
+                        </div>
+                        <div class="col-span-2 sm:col-span-1">
+                            <label for="stay_days" class="block mb-2 text-sm font-medium text-black">Stay Days</label>
+                            <input type="number" name="stay_days" id="stay_days" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="3" required>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1">
+                            <label for="destination" class="block mb-2 text-sm font-medium text-black">Destination</label>
+                            <select id="destination" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5">
+                                <option selected>Select Destination</option>
+                                <option value="Masaai Mara">Masaai Mara</option>
+                                <option value="Tsavo East">Tsavo East</option>
+                                <option value="Amboseli">Amboseli</option>
+                                <option value="Mt Kenya">Mt. Kenya</option>
+                                <option value="Diani Beach">Diani Beach</option>
+                                <option value="Ol Pejeta Conservancy">Ol Pejeta Conservancy</option>
+                                <option value="Samburu National Park">Samburu National Park</option>
+                            </select>
+                        </div>
+                        <div class="col-span-2">
+                            <label for="description" class="block mb-2 font-medium text-black">Additional Information</label>
+                            <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Write any additional information here"></textarea>                    
+                        </div>
+                    </div>
+                    <button type="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                        Get A Quote
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 
         <script src="Assets/js/main.js" async defer></script>
     </body>
