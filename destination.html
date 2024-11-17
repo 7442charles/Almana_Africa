@@ -281,15 +281,16 @@
                 Create one for me
             </button>
         </div>
+        <script>
+            document.getElementById('getawayButton').onclick = function() {
+                const message = 'Hello! I am interested in the weekend getaway packages.';
+                const whatsappUrl = `https://wa.me/${phone_number}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            };
+        </script>
     </section>
     
-    <script>
-        document.getElementById('getawayButton').onclick = function() {
-            const message = 'Hello! I am interested in the weekend getaway packages.';
-            const whatsappUrl = `https://wa.me/${phone_number}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-        };
-    </script>
+   
 
     <!-- <br> -->
     <br>
