@@ -421,6 +421,34 @@
         </div>
     </div>
 
+    <script>
+        // Select all the "Book now" buttons
+        const bookButtons = document.querySelectorAll('.book-btn');
+
+        bookButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Find the closest text card (parent element)
+                const textCard = this.closest('.text-card') || this.closest('.text-card-center');
+                
+                // Extract the <h2> element inside the text card
+                const destinationTitle = textCard.querySelector('h2.title');
+                
+                // Check if the title exists
+                if (destinationTitle) {
+                    const destinationName = destinationTitle.textContent;
+                    console.log(`Destination: ${destinationName}`);
+
+                    // Construct the WhatsApp message
+                    const message = `Hello! I am interested in the *${destinationName}* tour. Give me more info on this.`;
+                    const whatsappUrl = `https://wa.me/${phone_number}?text=${encodeURIComponent(message)}`;
+                    
+                    // Open WhatsApp with the message
+                    window.open(whatsappUrl, '_blank');
+                }
+            });
+        });
+    </script>
+
     <script src="Assets/js/main.js"></script>
-</body>
+</body>git 
 </html>
