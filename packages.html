@@ -124,7 +124,7 @@
                         </div>
                         
                         <div class="flex space-x-2 mt-4">
-                            <button class="bg-yellow-500 text-white px-4 py-2  hover:bg-yellow-600">Book now</button>
+                            <button class="bg-yellow-500 text-white px-4 py-2  hover:bg-yellow-600 pkg_book">Book now</button>
                             <button class="border border-yellow-500 text-yellow-500 px-4 py-2  hover:bg-yellow-500 hover:text-white">Learn more</button>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                         </div>
                         
                         <div class="flex space-x-2 mt-4">
-                            <button class="bg-yellow-500 text-white px-4 py-2  hover:bg-yellow-600">Book now</button>
+                             <button class="bg-yellow-500 text-white px-4 py-2  hover:bg-yellow-600 pkg_book">Book now</button>
                             <button class="border border-yellow-500 text-yellow-500 px-4 py-2  hover:bg-yellow-500 hover:text-white">Learn more</button>
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                         </div>
                         
                         <div class="flex space-x-2 mt-4">
-                            <button class="bg-yellow-500 text-white px-4 py-2  hover:bg-yellow-600">Book now</button>
+                             <button class="bg-yellow-500 text-white px-4 py-2  hover:bg-yellow-600 pkg_book">Book now</button>
                             <button class="border border-yellow-500 text-yellow-500 px-4 py-2  hover:bg-yellow-500 hover:text-white">Learn more</button>
                         </div>
                     </div>
@@ -205,7 +205,7 @@
                         </div>
                         
                         <div class="flex space-x-2 mt-4">
-                            <button class="bg-yellow-500 text-white px-4 py-2  hover:bg-yellow-600">Book now</button>
+                             <button class="bg-yellow-500 text-white px-4 py-2  hover:bg-yellow-600 pkg_book">Book now</button>
                             <button class="border border-yellow-500 text-yellow-500 px-4 py-2  hover:bg-yellow-500 hover:text-white">Learn more</button>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                         </div>
                         
                         <div class="flex space-x-2 mt-4">
-                            <button class="bg-yellow-500 text-white px-4 py-2  hover:bg-yellow-600">Book now</button>
+                             <button class="bg-yellow-500 text-white px-4 py-2  hover:bg-yellow-600 pkg_book">Book now</button>
                             <button class="border border-yellow-500 text-yellow-500 px-4 py-2  hover:bg-yellow-500 hover:text-white">Learn more</button>
                         </div>
                     </div>
@@ -259,7 +259,7 @@
                         </div>
                         
                         <div class="flex space-x-2 mt-4">
-                            <button class="bg-yellow-500 text-white px-4 py-2  hover:bg-yellow-600">Book now</button>
+                             <button class="bg-yellow-500 text-white px-4 py-2  hover:bg-yellow-600 pkg_book">Book now</button>
                             <button class="border border-yellow-500 text-yellow-500 px-4 py-2  hover:bg-yellow-500 hover:text-white">Learn more</button>
                         </div>
                     </div>
@@ -410,6 +410,35 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Select all the "Book now" buttons on the packages page
+        const packageButtons = document.querySelectorAll('.pkg_book');
+
+        // Add click event listener to each button
+        packageButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Find the closest package card (parent element)
+                const packageCard = this.closest('.max-w-xs');
+
+                // Extract the <h2> element inside the package card
+                const packageTitle = packageCard.querySelector('h2');
+
+                // Check if the title exists
+                if (packageTitle) {
+                    const packageName = packageTitle.textContent;
+                    console.log(`Package: ${packageName}`);
+
+                    // Construct the WhatsApp message
+                    const message = `Hello! I am interested in the ${packageName} package. Give me more info on this.`;
+                    const whatsappUrl = `https://wa.me/${phone_number}?text=${encodeURIComponent(message)}`;
+                    
+                    // Open WhatsApp with the message
+                    window.open(whatsappUrl, '_blank');
+                }
+            });
+        });
+    </script>
 
         <script src="Assets/js/main.js" async defer></script>
     </body>
