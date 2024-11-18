@@ -10,7 +10,7 @@ menuToggle.addEventListener('click', () => {
     }
 });
 
-const phone_number = +254759418593;
+const phone_number = +254719306479;
 
 // handle modal
 const openModalButton = document.getElementById('open-modal');
