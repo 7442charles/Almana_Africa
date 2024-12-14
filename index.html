@@ -285,11 +285,11 @@
         <h2 class="text-3xl font-bold text-center mb-5  leading-relaxed tblue">Vacation Packages tailored for <span class="torange">you</span></h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-2">
             <!-- Card 1 masaai mara -->
-            <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="discover.html#dis_masaai_mara">
                     <img class="rounded-t-lg" src="Assets/images/new_mara.jpg" alt="masaai mara" />
                 </a>
-                <div class="p-5 flex flex-col ">
+                <div class="p-5 flex flex-col">
                     <div class="flex justify-between">
                         <a href="discover.html#dis_masaai_mara" class="w-1/2">
                             <h5 class="mb-2 font-bold tracking-tight tblue dark:text-white">Masaai Mara National Park</h5>
@@ -297,14 +297,118 @@
                         <p class="mb-3 font-normal text-black dark:text-white w-1/2 text-right">valid until dec 2024</p>
                     </div>
                     <div class="">
-                        <button class="w-full px-3 py-2 font-medium text-center text-white bgblue " onclick="location.href='discover.html#dis_masaai_mara';">
+                        <button id="open-mara-modal" class="w-full px-3 py-2 font-medium text-center text-white bgblue">
                             Explore Now
                         </button>
                     </div>
                 </div>
             </div>
+            
+            <!-- Maasai Mara Modal -->
+            <div id="mara-modal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+                <div class="relative p-4 w-full max-w-3xl h-auto max-h-full overflow-y-auto bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <!-- Modal header -->
+                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                            <h2 class="text-lg font-semibold tblue dark:text-white">
+                                5 Days Amboseli, Lake Naivasha and Maasai Mara Itinerary
+                            </h2>
+                            <button id="close-mara-modal" type="button" class="tblue bgorange hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                </svg>
+                                <span class="sr-only bgblue tblue">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="p-4 md:p-5">
+                            <ol class="relative border-l border-gray-200 dark:border-gray-600">
+                                <li class="mb-10 ml-4">
+                                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white dark:ring-gray-700 dark:bg-blue-600">
+                                        <svg class="w-2.5 h-2.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2z"/>
+                                        </svg>
+                                    </span>
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 1</h3>
+                                    <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">08:00 am</time>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400">Pick up from Nairobi and drive to Amboseli National Park. You will arrive in time for lunch after which you have some time to relax before proceeding on an evening game drive. Amboseli National Park is known for its large elephant herds and views of Mount Kilimanjaro. After the evening game drives, you return to the camp to freshen up and settle for dinner.</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Accommodation: Amboseli AA Lodge</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white dark:ring-gray-700 dark:bg-blue-600">
+                                        <svg class="w-2.5 h-2.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2z"/>
+                                        </svg>
+                                    </span>
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 2</h3>
+                                    <p class=" mb-4 text-base font-normal  dark:text-gray-400">You'll wake up to spectacular scenes of Mount Kilimanjaro on a clear morning. After an early breakfast, you will check out and proceed on a morning game drive. Later exit the park and take a road trip to Naivasha with a lunch stop in Nairobi. Upon arrival, you will embark on a refreshing boat ride in Lake Naivasha where you get to see water birds such as fish eagles and pelicans among others. Later you will check in at the hotel.</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Accommodation: Lake Naivasha Sweetlake Resort</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white dark:ring-gray-700 dark:bg-blue-600">
+                                        <svg class="w-2.5 h-2.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2z"/>
+                                        </svg>
+                                    </span>
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 3</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400">After breakfast, check out and proceed to Masai Mara. You will arrive in time for lunch, relax thereafter and head out on an evening game drive from about 4pm till sunset.</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Accommodation: Endeem Mara Resort</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white dark:ring-gray-700 dark:bg-blue-600">
+                                        <svg class="w-2.5 h-2.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2z"/>
+                                        </svg>
+                                    </span>
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 4</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400">Set off after an early breakfast and enjoy extensive game drives most of the day. You have good chances to see most of the Big Five. You'll break to have a picnic lunch at a designated place in the open savanna with enchanting views. Resume game drives till you return to your camp in the evening. An optional visit to the Masai village can be arranged in the evening.</p>
+                                    <p class="text-sm font-medium  dark:text-gray-300">Accommodation: Endeem Mara Resort</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white dark:ring-gray-700 dark:bg-blue-600">
+                                        <svg class="w-2.5 h-2.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2z"/>
+                                        </svg>
+                                    </span>
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 5</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400">After breakfast, depart for Nairobi with lunch at a designated restaurant on the way.</p>
+                                </li>
+                            </ol>
+
+                            <h4 class="mt- 4 text-lg font-semibold tblue dark:text-white">Total Cost</h4>
+                            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Per person sharing:</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Peak Season: <strong>USD 2,090.00</strong></li>
+                                <li>Low Season: <strong>USD 1,695.00</strong></li>
+                            </ul>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Included in the Cost</h4>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Private transport in a safari land cruiser</li>
+                                <li>Park entry fees in Amboseli & Masai Mara</li>
+                                <li>Full board accommodation while on safari</li>
+                                <li>Game drives and sightseeing</li>
+                                <li>Boat ride in Lake Naivasha</li>
+                                <li>Services of an English-speaking safari driver guide</li>
+                                <li>Bottled drinking water in the safari vehicle</li>
+                            </ul>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Excluded in the Cost</h4>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Air fares</li>
+                                <li>Travel & medical insurance</li>
+                                <li>Balloon safaris</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!--END Maasai Mara Modal -->
+
+
             <!-- Card 2 Samburu-->
-            <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <!-- <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="discover.html#dis_samburu_nat">
                     <img class="rounded-t-lg" src="Assets/images/samburu.jpeg" alt="Samburu" />
                 </a>
@@ -321,30 +425,112 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> -->
             
-            <!-- Card 3 Tsavo East National Park-->
+            <!-- Card 3 mount kenya-->
             <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="discover.html#dis_tsavo_east">
-                    <img class="rounded-t-lg" src="Assets/images/tsavo.jpeg" alt="Tsavo east national park" />
+                    <img class="rounded-t-lg" src="Assets/images/tsavo.jpeg" alt="Mount Kenya National Park" />
                 </a>
                 <div class="p-5 flex flex-col ">
                     <div class="flex justify-between">
                         <a href="discover.html#dis_tsavo_east" class="w-1/2">
-                            <h5 class="mb-2 font-bold tracking-tight text-blue-500 dark:text-white">Tsavo East National Park</h5>
+                            <h5 class="mb-2 font-bold tracking-tight text-blue-500 dark:text-white">Mount Kenya National Park</h5>
                         </a>
                         <p class="mb-3 font-normal text-black dark:text-white w-1/2 text-right">valid until june 2025</p>
                     </div>
                     <div class="">
-                        <button  class="w-full px-3 py-2 font-medium text-center text-white bgblue " id="btn_tsavo" onclick="location.href='discover.html#dis_tsavo_east';">
+                        <button id="open-mount-kenya-modal" class="w-full px-3 py-2 font-medium text-center text-white bgblue">
                             Explore Now
                         </button>
                        
                     </div>
                 </div>
             </div>
+
+            <!-- Mount Kenya Modal -->
+            <div id="mount-kenya-modal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+                <div class="relative p-4 w-full max-w-3xl h-auto max-h-full overflow-y-auto bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <!-- Modal header -->
+                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                            <h3 class="text-lg font-semibold tblue dark:text-white">
+                                Mount Kenya Trek: Chogoria to Sirimon Route Itinerary
+                            </h3>
+                            <button id="close-mount-kenya-modal" type="button" class="tblue bgorange hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="p-4 md:p-5">
+                            <ol class="relative border-l border-gray-200 dark:border-gray-600">
+                                <li class="mb-10 ml-4">
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 1</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400"><strong>Activity:</strong> Drive from Nairobi to Chogoria Town (3 hours). Visit the local market and have lunch at a hotel. Drive in a 4WD vehicle up the rough forest track to the Chogoria Gate. Overnight at camp (Tents).</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Meal Plan: Breakfast, Lunch, and Dinner</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 2</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400"><strong>Activity:</strong> Gentle walk to the Nithi Gates. Explore the Nithi Falls and Gorge (7 km, 2 hours). Overnight at camp (Tents).</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Meal Plan: Breakfast, Lunch, and Dinner</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 3</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400"><strong>Activity:</strong> Walk up the ridge overlooking Gorges Valley to Hall Tarns campsite. Enjoy dramatic views of the summit and Lake Michelson (9 km, 5-6 hours). Overnight at camp (Tents).</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Meal Plan: Breakfast, Lunch, and Dinner</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 4</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400"><strong>Activity:</strong> Wake up early at 3:00 AM for a 3-4 hour ascent to Point Lenana for a sunrise view at the summit. Descend to Shipton Camp for a full breakfast. Continue to Old Moses Camp for overnight (12 km, 5-6 hours). Overnight at camp ( Tents).</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Meal Plan: Breakfast, Lunch, and Dinner</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 5</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400"><strong>Activity:</strong> Descend to Sirimon Gate (9 km). Drive to Nanyuki and then proceed to Nairobi, arriving between 3:00 PM and 5:00 PM.</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Meal Plan: Breakfast</p>
+                                </li>
+                            </ol>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">What's Included</h4>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>All park fees</li>
+                                <li>Services of a guide, porters, and cooks</li>
+                                <li>Food, cooking utensils, and camping fees</li>
+                                <li>Tent accommodations</li>
+                                <li>Transport from Nairobi to Chogoria Town and Chogoria Gate</li>
+                                <li>Transport from Sirimon Gate to Nanyuki Town and then back to Nairobi</li>
+                            </ul>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">What's Extra</h4>
+                            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Basic Personal Equipment (What to Bring):</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Sleeping mats</li>
+                                <li>Gloves</li>
+                                <li>Sunglasses</li>
+                                <li>Sleeping bag</li>
+                                <li>Hats</li>
+                                <li>Rain suit (jacket and trousers)</li>
+                                <li>Warm jacket</li>
+                                <li>Walking sticks</li>
+                                <li>Mountain boots</li>
+                                <li>Scarf</li>
+                                <li>Rain trousers</li>
+                                <li>Head torch</li>
+                                <li>Tips for the guide, porters, and cook</li>
+                            </ul>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Total Cost Per Person</h4>
+                            <p class="text-base font-normal text-gray-500 dark:text-gray-400"><strong>$950</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <!-- Card 4 Mt Kenya-->
+            <!-- Card 4 Nairobi National Park-->
             <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="discover.html#dis_mt_kenya">
                     <img class="rounded-t-lg" src="Assets/images/mt_kenya.jpeg" alt="Mt Kenya" />
@@ -352,20 +538,71 @@
                 <div class="p-5 flex flex-col ">
                     <div class="flex justify-between">
                         <a href="discover.html#dis_mt_kenya" class="w-1/2">
-                            <h5 class="mb-2 font-bold tracking-tight text-blue-500 dark:text-white">Mt Kenya</h5>
+                            <h5 class="mb-2 font-bold tracking-tight text-blue-500 dark:text-white">Nairobi Drive</h5>
                         </a>
                         <p class="mb-3 font-normal text-black dark :text-white w-1/2 text-right">valid until June 2025</p>
                     </div>
                     <div class="discover.html#dis_mt_kenya">
-                        <button class="w-full px-3 py-2 font-medium text-center text-white bgblue " onclick="location.href='discover.html#dis_mt_kenya';">
+                        <button id="open-nairobi-modal" class="w-full px-3 py-2 font-medium text-center text-white bgblue">
                             Explore Now
                         </button>
                     </div>
                 </div>
             </div>
+            <!-- Nairobi Modal -->
+            <div id="nairobi-modal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+                <div class="relative p-4 w-full max-w-3xl h-auto max-h-full overflow-y-auto bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <!-- Modal header -->
+                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                            <h3 class="text-lg font-semibold tblue dark:text-white">
+                                Nairobi National Park, David Sheldrick Wildlife Trust, Giraffe Centre, and Karen Blixen Museum Itinerary
+                            </h3>
+                            <button id="close-nairobi-modal" type="button" class="tblue bgorange hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="p-4 md:p-5">
+                            <ol class="relative border-l border-gray-200 dark:border-gray-600">
+                                <li class="mb-10 ml-4">
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">8:00 AM - 9:30 AM</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400"><strong>Nairobi National Park:</strong> Start your day early to experience the unique combination of wildlife and city skyline views. Morning game drive to see a variety of animals, such as lions, giraffes, zebras, buffaloes, and rhinos. The park is compact, and animals are often more active in the early morning, making this an ideal time for wildlife viewing.</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">9:30 AM - 10:30 AM</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400"><strong>David Sheldrick Wildlife Trust:</strong> Travel to the trust, about a 15-minute drive from Nairobi National Park. Visit the Elephant Orphanage: Arrive by 10:00 AM for the daily feeding time of the baby elephants (from 11:00 AM). Watch the adorable orphans drink their milk and play in the mud. Learn about the trust’s conservation efforts. Activity includes a guided tour and the chance to interact with the elephants, learn their stories, and understand how the trust protects them.</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">10:30 AM - 11:30 AM</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400"><strong>Giraffe Centre:</strong> Head to the Giraffe Centre, about a 20-minute drive from David Sheldrick Wildlife Trust. Visit the centre dedicated to the endangered Rothschild giraffe. Feed the giraffes and interact with them as they stick their long necks out from the feeding platform. Explore the nature trails around the centre and enjoy watching the giraffes up close.</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">11:30 AM - 1:00 PM</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400"><strong>Karen Blixen Museum:</strong> Drive to the museum, approximately 15 minutes from the Giraffe Centre. Explore the former home of Karen Blixen, the famous Danish author of *Out of Africa*. Take a guided tour to learn about her life in Kenya, the history of the farm, and the real-life events that inspired her book and movie. Walk around the gardens, see the house, and explore the museum exhibits.</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">1:00 PM</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400"><strong>Lunch:</strong> Have lunch before being dropped back to your hotel.</p>
+                                </li>
+                            </ol>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Total Cost</h4>
+                            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Per person:</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li><strong>USD 200.00</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <!-- Card 5 Olpejeta-->
-            <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <!-- <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="discover.html#dis_olpejeta">
                     <img class="rounded-t-lg" src="Assets/images/olpejeta.jpeg" alt="Olpejeta conservancy" />
                 </a>
@@ -382,10 +619,10 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> -->
            
             <!-- Card 6 Diani Beach -->
-            <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <!-- <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="discover.html#dis_diani_beach">
                     <img class="rounded-t-lg" src="Assets/images/diani.jpeg" alt="Diani Beach" />
                 </a>
@@ -405,7 +642,7 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Card 7 Nakuru -->
             <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -415,17 +652,109 @@
                 <div class="p-5 flex flex-col ">
                     <div class="flex justify-between">
                         <a href="discover.html#dis_nakuru" class="w-1/2">
-                            <h5 class="mb-2 font-bold tracking-tight text-blue-500 dark:text-white">Nakuru</h5>
+                            <h5 class="mb-2 font-bold tracking-tight text-blue-500 dark:text-white">Lake Nakuru</h5>
                         </a>
                         <p class="mb-3 font-normal text-black dark:text-white w-1/2 text-right">valid until dec 2024</p>
                     </div>
                     <div class="">
-                        <button class="
-                                w-full px-3 py-2 font-medium text-center text-white bgblue
-                            " 
-                            onclick="location.href='discover.html#dis_nakuru';">
-                                Explore Now
+                        <button id="open-lake-nakuru-modal" class="w-full px-3 py-2 font-medium text-center text-white bgblue">
+                            Explore Now
                         </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lake Nakuru Modal -->
+            <div id="lake-nakuru-modal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+                <div class="relative p-4 w-full max-w-3xl h-auto max-h-full overflow-y-auto bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <!-- Modal header -->
+                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                            <h3 class="text-lg font-semibold tblue dark:text-white">
+                                4 Days / 3 Nights Masai Mara and Lake Nakuru Wildlife Safari
+                            </h3>
+                            <button id="close-lake-nakuru-modal" type="button" class="tblue bgorange hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="p-4 md:p-5">
+                            <ol class="relative border-l border-gray-200 dark:border-gray-600">
+                                <li class="mb-10 ml-4">
+                                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white dark:ring-gray-700 dark:bg-blue-600">
+                                        <svg class="w-2.5 h-2.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2z"/>
+                                        </svg>
+                                    </span>
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 1</h3>
+                                    <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">08:00 am</time>
+                                    <p class="mb-4 text-base font-normal 
+                                     dark:text-gray-400">Pick up from your place of stay in the morning, after a short safari briefing you will proceed to Masai Mara. The drive is very scenic, passing through the highlands from where you capture spectacular scenes of the Great Rift Valley. You will arrive at the camp in time for lunch. After lunch, you have time to freshen up before embarking on an afternoon game drive till sunset. Or relaxation at the resort.</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Accommodation: Endeem Mara Resort/similar</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white dark:ring-gray-700 dark:bg-blue-600">
+                                        <svg class="w-2.5 h-2.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2z"/>
+                                        </svg>
+                                    </span>
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 2</h3>
+                                    <p class="mb-4 text-base font-normal 
+                                     dark:text-gray-400">Wake up to bird melodies and fresh, cool air all around the camp. After breakfast, set off on a full-day game drive with a packed lunch. Explore the Mara plains and come face to face with wild animals in their natural habitat. Observe their behavior and capture lasting memories. You will enjoy your packed lunch at a designated spot out in the open savannah. Thereafter, the game drive resumes till evening when you head back to the camp for another relaxing evening.</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Accommodation: Endeem Mara Resort/similar</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white dark:ring-gray-700 dark:bg-blue-600">
+                                        <svg class="w-2.5 h-2.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2z"/>
+                                        </svg>
+                                    </span>
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 3</h3>
+                                    <p class="mb-4 text-base font-normal 
+                                     dark:text-gray-400">After breakfast, you can visit a Masai village (optional). Proceed to Lake Nakuru with a lunch stopover on the way. Later check in at your hotel. Relax as you use the hotel amenities.</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Accommodation: Buraha Zenoni Hotel & Resort</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white dark:ring-gray-700 dark:bg-blue-600">
+                                        <svg class="w-2.5 h-2.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2z"/>
+                                        </svg>
+                                    </span>
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 4</h3>
+                                    <p class="mb-4 text-base font-normal 
+                                     dark:text-gray-400">After breakfast, leave for Lake Nakuru National Park for a game drive. Exit the park and have lunch at the designated restaurant on your way to Nairobi.</p>
+                                </li>
+                            </ol>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Included in the Cost</h4>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Group transport in a safari land cruiser</li>
+                                <li>Park entry fees in Masai Mara</li>
+                                <li>Full board accommodation at a budget camp</li>
+                                <li>Game drives & sightseeing</li>
+                                <li>Services of an English-speaking driver guide</li>
+                            </ul>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Excluded in the Cost</h4>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Personal items</li>
+                                <li>Alcoholic & non-alcoholic beverages</li>
+                                <li>Optional activities such as balloon safari & Masai village visit </li>
+                                <li>Tips & gratuities</li>
+                            </ul>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Total Cost</h4>
+                            <p class="text-base font-normal 
+                             dark:text-gray-400">Per person:</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Low Season: <strong>USD 730.00</strong></li>
+                                <li>Peak Season: <strong>USD 930.00</strong></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -443,12 +772,81 @@
                         <p class="mb-3 font-normal text-black dark:text-white w-1/2 text-right">valid until dec 2024</p>
                     </div>
                     <div class="">
-                        <button class="
-                                w-full px-3 py-2 font-medium text-center text-white bgblue
-                            " 
-                            onclick="location.href='discover.html#dis_amboseli';">
-                                Explore Now
+                        <button id="open-amboseli-modal" class="w-full px-3 py-2 font-medium text-center text-white bgblue">
+                            Explore Now
                         </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Amboseli Modal -->
+            <div id="amboseli-modal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+                <div class="relative p-4 w-full max-w-3xl h-auto max-h-full overflow-y-auto bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <!-- Modal header -->
+                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                            <h3 class="text-lg font-semibold tblue dark:text-white">
+                                2 Days Amboseli National Park Itinerary
+                            </h3>
+                            <button id="close-amboseli-modal" type="button" class="tblue bgorange hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="p-4 md:p-5">
+                            <ol class="relative border-l border-gray-200 dark:border-gray-600">
+                                <li class="mb-10 ml-4">
+                                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white dark:ring-gray-700 dark:bg-blue-600">
+                                        <svg class="w-2.5 h-2.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2z"/>
+                                        </svg>
+                                    </span>
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 1</h3>
+                                    <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">08:00 am</time>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400">Pick up from Nairobi and drive to Amboseli National Park. Arrive in time for lunch, followed by relaxation. Proceed for an evening game drive. Amboseli National Park is in southern Kenya, known for its large elephant herds and views of the majestic Mount Kilimanjaro. The Observation Hill offers panoramas of the peak and the park’s plains and swamps. After the evening game drives, return to the camp to freshen up and settle for dinner. Unwind the evening in the lounge.</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Accommodation: Amboseli AA Lodge</p>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white dark:ring-gray-700 dark:bg-blue-600">
+                                        <svg class="w-2.5 h-2.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2z"/>
+                                        </svg>
+                                    </span>
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 2</h3>
+                                    <p class="mb-4 text-base font-normal  dark:text-gray-400">Wake up to spectacular scenes of Mount Kilimanjaro on a clear morning. Enjoy an early breakfast. Check out and proceed for a morning game drive. Exit the park and take a road trip to Naivasha.</p>
+                                </li>
+                            </ol>
+
+                            
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Included in the Cost</h4>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Private transport in a safari land cruiser</li>
+                                <li>Park entry fees for Amboseli National Park</li>
+                                <li>Full board accommodation at Amboseli AA Lodge</li>
+                                <li>Game drives and sightseeing</li>
+                                <li>Services of an English-speaking safari driver guide</li>
+                                <li>Bottled drinking water in the safari vehicle</li>
+                            </ul>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Excluded in the Cost</h4>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Air fares</li>
+                                <li>Travel & medical insurance</li>
+                                <li>Balloon safaris</li>
+                            </ul>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Total Cost</h4>
+                            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Per person sharing:</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Peak Season: <strong>USD 2,090.00</strong></li>
+                                <li>Low Season: <strong>USD 1,695.00</strong></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -467,15 +865,69 @@
                         <p class="mb-3 font-normal text-black dark:text-white w-1/2 text-right">valid until dec 2024</p>
                     </div>
                     <div class="">
-                        <button class="
-                                w-full px-3 py-2 font-medium text-center text-white bgblue
-                            " 
-                            onclick="location.href='discover.html#dis_amboseli';">
-                                Explore Now
+                        <button id="open-naivasha-modal" class="w-full px-3 py-2 font-medium text-center text-white bgblue">
+                            Explore Now
                         </button>
                     </div>
                 </div>
             </div>
+
+            <!-- Naivasha Modal -->
+            <div id="naivasha-modal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+                <div class="relative p-4 w-full max-w-3xl h-auto max-h-full overflow-y-auto bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <!-- Modal header -->
+                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                            <h3 class="text-lg font-semibold tblue dark:text-white">
+                                Naivasha National Park Itinerary
+                            </h3>
+                            <button id="close-naivasha-modal" type="button" class="tblue bgorange hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="p-4 md:p-5">
+                            <ol class="relative border-l border-gray-200 dark:border-gray-600">
+                                <li class="mb-10 ml-4">
+                                    <h3 class="flex items-start mb-1 text-lg font-semibold tblue dark:text-white">Day 2</h3>
+                                    <p class="mb-4 text-base font-normal dark:text-gray-400">After exiting Amboseli National Park, take a road trip to Naivasha with a lunch stop in Nairobi. Upon arrival, embark on a refreshing boat ride in Lake Naivasha, where you will see water birds such as fish eagles and pelicans, among others. Later, check in at the hotel.</p>
+                                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Accommodation: Lake Naivasha Sweetlake Resort</p>
+                                </li>
+                            </ol>
+
+                            
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Included in the Cost</h4>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Private transport in a safari land cruiser</li>
+                                <li>Boat ride in Lake Naivasha</li>
+                                <li>Full board accommodation at Lake Naivasha Sweetlake Resort</li>
+                                <li>Services of an English-speaking safari driver guide</li>
+                                <li>Bottled drinking water in the safari vehicle</li>
+                            </ul>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Excluded in the Cost</h4>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Air fares</li>
+                                <li>Travel & medical insurance</li>
+                                <li>Balloon safaris</li>
+                            </ul>
+
+                            <h4 class="mt-4 text-lg font-semibold tblue dark:text-white">Total Cost</h4>
+                            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Per person sharing:</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>Peak Season: <strong>USD 2,090.00</strong></li>
+                                <li>Low Season: <strong>USD 1,695.00</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
